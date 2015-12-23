@@ -1,4 +1,9 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-var app = angular.module('myApp', []);
+var applicationModule = angular.module('ApplicationModule', [ 'ui.router']);
+
+// CONTROLLERS
+applicationModule.controller('ApplicationController', ['$state', '$scope', appController]);
+
+// ROUTING
+applicationModule.config(['$stateProvider', '$urlRouterProvider', appConfig]);

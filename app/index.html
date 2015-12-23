@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+
+<html lang="en" ng-app="ApplicationModule">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Identity Manager</title>
+    <meta name="description" content="Identity Manager">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<base href="/app/">-->
+    <link rel="stylesheet/less" href="styles/styles.less">
+    <script src='bower_components/less/dist/less.min.js'></script>
 </head>
-<body>
 
-  <div></div>
+<body class="container-fluid container-no-padding">
 
+    <div id="appView" ui-view ng-controller="ApplicationController"></div>
 
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="app.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app-config.js"></script>
+    <script src="app-controller.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
