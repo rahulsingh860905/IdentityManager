@@ -1,26 +1,37 @@
+define(['app',
+        'components/login/login.controller'],
 
-'use strict';
+    function (app,LoginController) {
 
-function appConfig($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
+    ApplicationConfig.$inject = ["$stateProvider", "$urlRouterProvider"];
 
-    $stateProvider
-        .state('home', {
-            abstract: false,
-            url: '/',
-            templateUrl: 'components/layout/home.html'
-        })
-        .state('login', {
-            abstract: false,
-            url: '/login',
-            templateUrl: 'components/login/login.html'
-            //controller: 'LoginController'
-        })
-        .state('register', {
-            abstract: false,
-            url: '/register',
-            templateUrl: 'components/register/register.html'
-            //controller: 'LoginController'
-        })
-}
+    function ApplicationConfig($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("/home");
+
+        $stateProvider
+            .state("home", {
+                url: "/home",
+                templateUrl: 'components/layout/home.html'
+            })
+            .state("register", {
+                url: "/register",
+                templateUrl: "components/register/register.html"
+                //controller: "RegisterController"
+            })
+            .state("about", {
+                url: "/about",
+                templateUrl: "components/about/about.html"
+            })
+            .state("login", {
+                url: "/login",
+                templateUrl: "components/login/login.html",
+                controller: "LoginController",
+                controllerAs: 'vm'
+            })
+
+        console.log("Config Block");
+    }
+
+    app.config(ApplicationConfig);
+});
 

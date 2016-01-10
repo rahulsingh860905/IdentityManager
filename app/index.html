@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app="ApplicationModule">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Identity Manager</title>
     <meta name="description" content="Identity Manager">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
     <!--<base href="/app/">-->
     <link rel="stylesheet/less" href="styles/styles.less">
     <script src='bower_components/less/dist/less.min.js'></script>
 </head>
 
-<body class="container-fluid container-no-padding">
+<body>
 
-    <div id="appView" ui-view ng-controller="ApplicationController"></div>
+    <div id="appView" ui-view></div>
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!--<script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+
+    &lt;!&ndash;Main App&ndash;&gt;
+    <script src="app.js"></script>
     <script src="app.config.js"></script>
     <script src="app.controller.js"></script>
     <script src="app.run.js"></script>
-    <script src="app.js"></script>
+
+    &lt;!&ndash;Services&ndash;&gt;
+    <script src="common/services/logging.service.js"></script>
+    <script src="common/services/authentication.service.js"></script>
+    <script src="common/services/user.service.js"></script>-->
+
+    <script data-main="main" src="bower_components/requirejs/require.js"></script>
+
 </body>
 
 </html>
